@@ -1,0 +1,28 @@
+                                          List of databases
+           Name            |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+---------------------------+----------+----------+-------------+-------------+-----------------------
+ blog_development          | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ blog_test                 | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ books-app_development     | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ books-app_test            | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ computers                 | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ intro_app_development     | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ intro_app_test            | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ library                   | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ mu                        | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ muse_development          | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ muse_test                 | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres                  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ recipe_app_development    | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ recipe_app_test           | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0                 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+                           |          |          |             |             | postgres=CTc/postgres
+ template1                 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+                           |          |          |             |             | postgres=CTc/postgres
+ test1                     | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ twitter_clone_development | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ twitter_clone_test        | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ twitter_development       | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ twitter_test              | mu       | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+(21 rows)
+

@@ -4,7 +4,11 @@ class HomeController < ApplicationController
     begin
       @role = current_user.role
     rescue NoMethodError => e
-      redirect_to new_user_registration_path
+      redirect_to home_indexguest_path
     end
   end
+  def searchguest
+    @results = User.where(city: params[:q], role: 'guide')
+  end
+  
 end

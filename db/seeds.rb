@@ -33,9 +33,12 @@ user = User.create! :email => 'nar@gmail.com', :password => '123456', :password_
 user = User.create! :email => 'muhannad@gmail.com', :password => '123456', :password_confirmation => '123456', :first_name => 'muhannad', :last_name => 'A', :city => 'Riyadh', :country => 'Saudi Arabia', :phone => '998866554', :role => 'user'
 ##############
 ##############
+
 ##############
 ##############
+
 ##############
 ##############
+
 ##############
 ##############

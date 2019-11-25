@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index'
+  get 'home/becomeguide'
   devise_for :users
   root to: "home#index"
   get 'home/indexguest'

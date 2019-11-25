@@ -11,4 +11,7 @@ class User < ApplicationRecord
          validates :country, presence: true, on: :create
          validates :phone, presence: true, on: :create
 
+         def update_status
+          self.update(role:'guide') if self.bookings.pluck(:role).include? 'user'
+        end
 end

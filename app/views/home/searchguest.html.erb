@@ -8,12 +8,13 @@
 <% @results.each do |result| %>
 <div class= "search-container">
     <div class = "user-card">
-        <div class ="full-name-city">
-            <div class = "full-name">
-            <h1><%= result.first_name %> <%= result.last_name %></h1>
+        <div class ="personal-info">
+            <div class = "full-name-div">
+            <h1 class = "name"><%= result.first_name %> <%= result.last_name %></h1>
+            <h3 class = "country"><%= result.country %>,<%= result.city %></h3>
         </div>
-            <h3><%= result.country %>,<%= result.city %></h3>
-            <<%= image_tag  "1.jpg", class:"avatar" %>>
+            
+            <%= image_tag  "1.jpg", class:"avatar" %>
         </div>
         
     

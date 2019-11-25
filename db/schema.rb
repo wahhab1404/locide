@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 2019_11_25_102525) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "first_name"
-    t.string "last_name"
-    t.string "city"
-    t.string "country"
-    t.integer "phone"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "city", null: false
+    t.string "country", null: false
+    t.string "phone", null: false
     t.string "role", default: "user"
     t.string "about_me"
     t.string "why_me"

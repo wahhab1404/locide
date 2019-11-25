@@ -1,3 +1,22 @@
+<nav>
+<ul>
+    <li> <%= link_to  "HOME", home_index_path %></li>
+    
+</ul>
+</nav>
+
 <% @results.each do |result| %>
-<h1> <%= result.email %></h1>
+<div class= "search-container">
+    <div class = "user-card">
+        <div class ="personal-info">
+            <div class = "full-name-div">
+            <h1 class = "name"><%= result.first_name %> <%= result.last_name %></h1>
+            <h3 class = "country"><%= result.country %>,<%= result.city %></h3>
+        </div>
+            
+            <%= image_tag  "1.jpg", class:"avatar" %>
+        </div>
+        
+    
+</div>
 <%end%>

@@ -13,4 +13,7 @@ class HomeController < ApplicationController
   def becomeguide
     @user = current_user
   end
+  def searchuser
+    @result = Trip.where(city: params[:query])
+  end
 end

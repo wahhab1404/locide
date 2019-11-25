@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  trip_image: MyString
+  places: MyString
+  points_of_interest: MyString
+  time: MyString
+  duration: MyString
+  user: one
+
+two:
+  name: MyString
+  description: MyString
+  trip_image: MyString
+  places: MyString
+  points_of_interest: MyString
+  time: MyString
+  duration: MyString
+  user: two

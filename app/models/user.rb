@@ -10,4 +10,5 @@ class User < ApplicationRecord
          validates :city, presence: true, on: :create
          validates :country, presence: true, on: :create
          validates :phone, presence: true, on: :create
+
 end

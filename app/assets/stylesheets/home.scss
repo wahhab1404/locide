@@ -1,0 +1,33 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// html {
+//   //   background-color: white;
+// }
+
+body {
+  margin: 0 auto;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: yellowgreen;
+  margin: 0 auto;
+  text-align: center;
+}
+img {
+  margin: 15vh;
+
+  height: 50vh;
+  width: 50vw;
+}
+.input-field {
+  width: 40vw;
+  border-radius: 10px;
+}
+.search-btn {
+  background-color: red;
+  border-radius: 10px 0 10px 0;
+  position: absolute;
+  right: 27%;
+}

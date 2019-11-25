@@ -1,6 +1,14 @@
-<%= link_to  "SINGUP", new_user_registration_path %>
+<div class ="container">
+        <%
+=begin%>
+ <div>
+              <%= image_tag  "1.jpg", class: "img" %>
+        </div> 
+<%
+=end%>
 <%= form_tag(home_searchguest_path, method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
+    <%= text_field_tag(:q, "", class: "input-field") %>
+    <%= submit_tag("Search",class: "search-btn") %>
+<% end %>  
+ <%= link_to  "SIGNE UP ", new_user_registration_path %>
+ </div>

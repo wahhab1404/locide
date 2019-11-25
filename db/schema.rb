@@ -10,14 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_11_24_091355) do
-=======
-ActiveRecord::Schema.define(version: 2019_11_24_101928) do
->>>>>>> master
+ActiveRecord::Schema.define(version: 2019_11_25_102525) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "trip_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["trip_id"], name: "index_bookings_on_trip_id"
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "trip_image"
+    t.string "places"
+    t.string "points_of_interest"
+    t.string "time"
+    t.string "duration"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_trips_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,17 +44,18 @@ ActiveRecord::Schema.define(version: 2019_11_24_101928) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-=======
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.string "city", null: false
-    t.string "country", null: false
-    t.string "phone", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "city"
+    t.string "country"
+    t.integer "phone"
     t.string "role", default: "user"
->>>>>>> master
+    t.string "about_me"
+    t.string "why_me"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "trips"
+  add_foreign_key "trips", "users"
 end

@@ -4,12 +4,6 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-<<<<<<< HEAD
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-=======
     <%= f.label :Email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -35,7 +29,6 @@
     <%= f.label "Phone Number".to_sym %><br />
     <%= f.text_field :phone %>
   </div>
->>>>>>> master
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>

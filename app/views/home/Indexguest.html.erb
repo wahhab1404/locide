@@ -1,0 +1,18 @@
+
+<div class ="container">
+        <div>
+              <%= image_tag  "1.jpg", class: "img" %>
+              
+        </div>
+        
+<%= form_with(url: "/search", method: "get") do %>
+  <%= text_field_tag(:q, "", class: "input-field") %>
+  <%= submit_tag("Search",class: "search-btn") %>
+<% end %>
+
+    <%
+=begin%>
+ <%= link_to  "SIGNE UP ", new_user_registration_path %> 
+<%
+=end%>
+ </div>

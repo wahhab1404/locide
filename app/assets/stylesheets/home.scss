@@ -31,3 +31,28 @@ img {
   position: absolute;
   right: 27%;
 }
+nav {
+  background-color: saddlebrown;
+  height: 10vh;
+  padding: 1vh;
+}
+ul {
+  display: flex;
+}
+li {
+  margin-left: 2%;
+  line-height: 5%;
+}
+.search-container {
+  display: flex;
+}
+.user-card {
+  text-align: center;
+  height: 30vh;
+  width: 30vw;
+  background-color: red;
+  margin: 1%;
+}
+.full-name{
+  display: flex;
+}

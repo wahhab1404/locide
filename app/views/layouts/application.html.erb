@@ -10,6 +10,21 @@
   </head>
 
   <body>
+  <nav>
+<ul>
+    <li> <%= link_to  "HOME", home_index_path %></li>
+    <li> <%= link_to  "TRIPS & TOURS", home_index_path %></li>
+    <li> <%= link_to  "ABOUT US", home_index_path %></li>
+    <li> <%= link_to  "FAQs", home_index_path %></li>
+</ul>
+<% if current_user == nil %>
+<%= button_to  "JOIN US", new_user_registration_path, method: :get, class:"join_btn" %></div>
+<%elsif current_user.role == "user"%>
+<%= button_to  "Become Guide", new_user_registration_path, method: :get, class:"join_btn" %></div>
+<%else%>
+<%= button_to  "Create Trip", trip_new_path, method: :get, class:"join_btn" %></div>
+<%end%>
+</nav>
   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>

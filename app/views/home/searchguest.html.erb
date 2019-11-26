@@ -1,13 +1,3 @@
-<nav>
-<ul>
-    <li> <%= link_to  "HOME", home_index_path %></li>
-    <li> <%= link_to  "TRIPS & TOURS", home_index_path %></li>
-    <li> <%= link_to  "ABOUT US", home_index_path %></li>
-    <li> <%= link_to  "FAQs", home_index_path %></li>
-</ul>
-<%= button_to  "JOIN US", new_user_registration_path, class:"join_btn" %></div>
-</nav>
-
 <% @results.each do |result| %>
 <div class= "search-container">
     <div class = "user-card">

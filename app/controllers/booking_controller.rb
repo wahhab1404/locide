@@ -5,7 +5,7 @@ class BookingController < ApplicationController
         @booking = @trip.bookings.new
     end
     def create
-        @booking = current_user.bookings.create(params.require(:booking).permit(:user_id, :trip_id))
-        
+        @trip = Trip.find(params[:booking][:trip_id])
+        @booking = @trip.bookings.create(params.require(:booking).permit(:user_id, :trip_id))
     end
 end

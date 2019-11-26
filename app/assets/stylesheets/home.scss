@@ -85,13 +85,13 @@ li {
 }
 .personal-info {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   padding: 2vh;
   justify-content: space-around;
 }
 .name {
   font-size: 1.5rem;
-  text-align: left;
+  text-align: left;  
 }
 .country {
   font-size: 1rem;

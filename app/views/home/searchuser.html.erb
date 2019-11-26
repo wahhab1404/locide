@@ -1,16 +1,4 @@
-<%
-=begin%>
- <nav>
-<ul>
-    <li> <%= link_to  "HOME", home_index_path %></li>
-    <li> <%= link_to  "TRIPS & TOURS", home_index_path %></li>
-    <li> <%= link_to  "ABOUT US", home_index_path %></li>
-    <li> <%= link_to  "FAQs", home_index_path %></li>
-</ul>
-<div><%= button_to  "JOIN US", new_user_registration_path, class:"join_btn" %></div>
-</nav> 
-<%
-=end%>
+
 <% @result.each do |result| %>
 <h1><%= result.id%> <%= link_to  "Book", trip_show_path(:id => result.id)%></h1>
 <%end%>

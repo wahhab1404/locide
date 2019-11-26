@@ -1,9 +1,11 @@
+<div class="user-info">
+<h1> Welcome <%=@fullname%></h1></div>
 
-<h1> Welcome <%=@fullname%></h1>
+
 <div class ="container">
         <div>
-              <%= image_tag  "logo.png", class: "img" %>
-        </div>
+        
+         </div> 
         
 <%= form_tag(home_searchuser_path, method: "get") do %>
   <%= text_field_tag(:query, "", class: "input-field") %>

@@ -2,6 +2,9 @@ class HomeController < ApplicationController
   
   def index
     begin
+      @first_name = current_user.first_name
+      @last_name = current_user.last_name
+      @fullname = @first_name + " " + @last_name
       @role = current_user.role
     rescue NoMethodError => e
       redirect_to home_indexguest_path

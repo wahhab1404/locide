@@ -7,13 +7,10 @@
 </ul>
 <div><%= button_to "Become a guide", home_becomeguide_path, class:"join_btn" %></div>
 </nav>
-<h1><%=@role%></h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
+<h1><%=@fullname%></h1>
 <div class ="container">
         <div>
               <%= image_tag  "logo.png", class: "img" %>
-              
         </div>
         
 <%= form_tag(home_searchuser_path, method: "get") do %>

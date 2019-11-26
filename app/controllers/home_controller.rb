@@ -19,4 +19,7 @@ class HomeController < ApplicationController
   def searchuser
     @result = Trip.where(city: params[:query])
   end
+  def guideprofile 
+    @trips = current_user.trips
+  end
 end

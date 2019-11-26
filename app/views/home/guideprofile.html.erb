@@ -1,14 +1,28 @@
-<div class = "guide-card">
-        <div class ="guide-info">
-            <div class="full-name-profile">
-            <h1 class = "name">Abdulwahhab </h1>
-            <h3 class = "country">Riyadh, Saudi Arabia</h3>
-        </div>
-        <div class="about-me">about me </div>
-            <%= image_tag  "person-1.jpg", class:"avatar" %>
+<div class="main">
+<div class="card-div">
+    <%= image_tag  "person-1.jpg", class:"profile-image" %>
+    <div class= "user-info">
+         <h1>Abdulwahhab Al Ballaa<h1>
+         <h3>Saudi Arabia, Riyadh<h3>
+    </div>
             <%
 =begin%>
  <%= button_to  "BOOK", new_user_registration_path, class:"book-btn" %> 
 <%
 =end%>
+    </div>
+
+    <div class= "card-div2">
+        <div class= "single-line">
+        <h2>About Me<h2>
+        <h3>Here is some info about me !</h3>
+        </div> 
+        <div class="single-line">
+        <h2>Points Of intrest</h2>
+        <h3>Shopping , Desert</h3>
         </div>
+
+    </div>
+   
+ </div>
+ 

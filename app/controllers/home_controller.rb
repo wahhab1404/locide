@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   def searchguest
     @results = User.where(city: params[:q], role:'guide')
   end
-  def becomeguide
+  def edit
     @user = current_user
   end
   def update

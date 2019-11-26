@@ -12,13 +12,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user = User.create! :email => 'doe@gmail.com', :password => '123456', :password_confirmation => '123456', :first_name => 'John', :last_name => 'Doe', :city => 'Riyadh', :country => 'Saudi Arabia', :phone => '123456789', :role => 'guide' 
+user = User.create! :email => 'doe@gmail.com', :password => '123456', :password_confirmation => '123456', :first_name => 'John', :last_name => 'Doe', :city => 'Riyadh', :country => 'Saudi Arabia', :phone => '123456789', :role => 'guide', :about_me => 'i am a guide in Riyadh'
 ##############
 ##############
-user = User.create! :email => 'smith@gmail.com', :password => '123456', :password_confirmation => '123456', :first_name => 'John', :last_name => 'Smith', :city => 'Jeddah', :country => 'Saudi Arabia', :phone => '113355779', :role => 'guide'
+user = User.create! :email => 'smith@gmail.com', :password => '123456', :password_confirmation => '123456', :first_name => 'John', :last_name => 'Smith', :city => 'Jeddah', :country => 'Saudi Arabia', :phone => '113355779', :role => 'guide',:about_me => 'Hi .. wellcome to my trip'
 ##############
 ##############
-user = User.create! :email => 'wang@gmail.com', :password => '123456', :password_confirmation => '123456', :first_name => 'Frank', :last_name => 'Wong', :city => 'Riyadh', :country => 'Saudi Arabia', :phone => '112233445', :role => 'guide'
+user = User.create! :email => 'wang@gmail.com', :password => '123456', :password_confirmation => '123456', :first_name => 'Frank', :last_name => 'Wong', :city => 'Riyadh', :country => 'Saudi Arabia', :phone => '112233445', :role => 'guide', :about_me => 'join me'
 ##############
 ##############
 user = User.create! :email => 'zel@gmail.com', :password => '123456', :password_confirmation => '123456', :first_name => 'Alicia', :last_name => 'Zelaya', :city => 'Riyadh', :country => 'Saudi Arabia', :phone => '223344556', :role => 'user'

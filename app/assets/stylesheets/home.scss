@@ -190,11 +190,10 @@ li {
   width: 200px;
   margin-right:1% ;
 }
-.card-div2{
+.about-guied{
   display: flex;
-  flex-direction: column;
-  
-  height: 200px;
+  flex-direction: row;
+  height: 130px;
   padding: 2%;
   background-color: gray;
 }
@@ -207,4 +206,29 @@ li {
 .btns{
   display: flex;
   flex-direction: row;
+}
+.trips-div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;;
+  padding: 2%;
+}
+.trip-card{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 200px;
+  background-color: #a31b0c;
+  padding: 2%;
+}
+.t-box {
+  padding: 1%;
+}
+.trips-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #d0b375;
 }

@@ -1,26 +1,16 @@
-<nav>
-    <ul>
-        <li> <%= link_to  "HOME", home_index_path %></li>
-        <li> <%= link_to  "TRIPS & TOURS", home_index_path %></li>
-        <li> <%= link_to  "ABOUT US", home_index_path %></li>
-        <li> <%= link_to  "FAQs", home_index_path %></li>
-    </ul>
-    <%if @role == 'user'%>
-    <%= button_to  "BECOME A GUIDE", new_user_registration_path, class:"join_btn" %>
-    <%else%>
-    <%= button_to  "Create Trip", new_user_registration_path, class:"join_btn" %>
-    <%end%>
-</nav>
-<h1><%=@fullname%></h1>
+<div class="user-info">
+<h1> Welcome <%=@fullname%></h1></div>
+
+
 <div class ="container">
         <div>
-              <%= image_tag  "logo.png", class: "img" %>
-        </div>
+        
+         </div> 
         
 <%= form_tag(home_searchuser_path, method: "get") do %>
   <%= text_field_tag(:query, "", class: "input-field") %>
   <%= submit_tag("Search",class: "search-btn") %>
 <% end %>
-<%= link_to  "sign out", destroy_user_session_path, method: :delete %>
+<%= link_to  "sign out", destroy_user_session_path, method: :delete, class:".sign" %>
 
  </div>

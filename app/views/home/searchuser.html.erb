@@ -1,4 +1,4 @@
-
 <% @result.each do |result| %>
 <h1> <%= result.name %></h1>
+<%= link_to  "View", trip_show_path(:id => result.id) %>
 <%end%>

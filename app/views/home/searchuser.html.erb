@@ -8,5 +8,5 @@
 <div><%= button_to  "JOIN US", new_user_registration_path, class:"join_btn" %></div>
 </nav>
 <% @result.each do |result| %>
-<h1> <%= result.name %></h1>
+<h1><%= result.id%> <%= link_to  "Book", trip_show_path(:id => result.id)%></h1>
 <%end%>

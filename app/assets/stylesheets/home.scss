@@ -4,6 +4,8 @@
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   margin: 0 auto;
@@ -12,6 +14,7 @@ body {
 .container {
   height: 100vh;
   width: 100vw;
+  flex-wrap: wrap;
 
   margin: 0 auto;
   text-align: center;
@@ -26,7 +29,7 @@ body {
   border-radius: 10px;
 }
 .search-btn {
-  background-color: red;
+  background-color: d0b375;
   border-radius: 10px 0 10px 0;
   position: absolute;
   right: 27%;
@@ -37,9 +40,10 @@ a {
 }
 nav {
   background-color: #a31b0c;
-  height: 4vh;
+  height: 40px;
   padding: 3vh;
   margin: 0 auto;
+  
 }
 ul {
   display: flex;
@@ -55,34 +59,58 @@ li {
   height: fit-content;
 }
 .user-card {
+  position: relative;
   text-align: center;
-  height: 30vh;
-  width: 30vw;
+  height: 200px;
+  width: 450px;
   background-color: #e9e9e9;
   margin-right: 2%;
   margin-left: 2%;
-  margin-top: 10px;
+  margin-top: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0, 0.2);
 }
-.full-name {
+.full-name-div {
+  position: absolute;
+  left: 40%;
   display: flex;
   flex-direction: column;
-  margin-left: 2%;
+  
 }
 .avatar {
+  position: absolute;
+  left :5%;
+  top: 5%;
   height: 13vh;
   max-width: 13vw;
 }
 .personal-info {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   padding: 2vh;
   justify-content: space-around;
 }
 .name {
   font-size: 1.5rem;
-  text-align: left;
+  text-align: left;  
 }
 .country {
   font-size: 1rem;
   text-align: left;
+}
+.join_btn {
+  background-color: #d0b375;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  height: 1.5em;
+  width: 7em;
+  border-radius: 12px;
+  position: absolute;
+  top: 1%;
+  left: 90%;
+}
+.about-me {
+  position: absolute;
+  top:30%;
+  left: 40%;
 }

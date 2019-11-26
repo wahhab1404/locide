@@ -33,6 +33,7 @@
                         <div class="trip-card">
                              <h4>Trip Name :<%= trip.name%></h4>
                              <h4>Points Of Intrest:s<%= trip.points_of_interest%></h4>
+                            <%= link_to  "VIEW", trip_show_path(:id => trip.id) %>
                         </div>
                     </div>
                 <%end%>

@@ -1,16 +1,25 @@
 <div class="user-info">
 <h1> Welcome <%=@fullname%></h1></div>
+ 
 
-
-<div class ="container">
-        <div>
-        
-         </div> 
-        
+<div class ="container">        
 <%= form_tag(home_searchuser_path, method: "get") do %>
   <%= text_field_tag(:query, "", class: "input-field") %>
   <%= submit_tag("Search",class: "search-btn") %>
 <% end %>
 <%= link_to  "sign out", destroy_user_session_path, method: :delete, class:".sign" %>
+<div class="book">
+      <% @bookings.each do |booking| %>
+           <div> 
+             <%= image_tag  "trip", class:"profile-image" %>
+                <div>
+                    <h4>Trip Name :<%= booking.trip.name%></h4>
+                    <h4>Points Of Intrest:<%= booking.trip.points_of_interest%> <%= booking.trip.time%></h4>
+                    <%= link_to  "VIEW", trip_show_path(:id => trip.id) %>
+                </div>
+            </div>
+        <%end%>
+    </div>
+ </div>
 
  </div>

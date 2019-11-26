@@ -1,9 +1,11 @@
-class BookController < ApplicationController
+class BookingController < ApplicationController
     def new
-        @trip = Trip.find(params[:trip])
-        @book = current_user.bookings.new
+        @trip = Trip.find(params[:id])
+        @user_id = params[:id]
+        @booking = @trip.bookings.new
     end
     def create
-        @book = current_user.books.create(params.require(:book).permit(:id, :trip_id))
+        @booking = current_user.bookings.create(params.require(:booking).permit(:user_id, :trip_id))
+        
     end
 end

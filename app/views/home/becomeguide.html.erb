@@ -1,9 +1,18 @@
 <%= form_for @user do |f| %>
-<%= f.hidden_field :user_id, :value => @role.user_id %>
+<%= f.hidden_field :user_id, :value => @user.id %>
 
-<div>
+<div class="form-group">
 <%= f.label :about_me, 'About Me'%>
 <% f.text_field :about_me%>
 </div>
+
+<div class="form-group">
+<%= f.label :why_me, 'Why Me'%>
+<% f.text_field :whyt_me%>
+</div>
+
+<div class="form-group">
+  <%= f.submit "Submit", trip_new_session_path %>
+  </div>
 
 <% end %>

@@ -1,9 +1,14 @@
 <%= form_for @user do |f| %>
-<%= f.hidden_field :user_id, :value => @role.user_id %>
-
-<div>
-<%= f.label :about_me, 'About Me'%>
-<% f.text_field :about_me%>
-</div>
-
-<% end %>
+    <%= f.hidden_field :user_id, :value => @user_id %>
+    <div class="form-group">
+    <%= f.label :about_me, 'About Me'%>
+    <% f.text_field :about_me%>
+    </div>
+    <div class="form-group">
+    <%= f.label :why_me, 'Why Me'%>
+    <% f.text_field :whyt_me%>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Submit", :class => "btn btn-danger btn-lg rounded-pill" %>
+      </div>
+    <% end %>

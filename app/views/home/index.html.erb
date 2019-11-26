@@ -1,9 +1,18 @@
+<nav>
+<ul>
+    <li> <%= link_to  "HOME", home_index_path %></li>
+    <li> <%= link_to  "TRIPS & TOURS", home_index_path %></li>
+    <li> <%= link_to  "ABOUT US", home_index_path %></li>
+    <li> <%= link_to  "FAQs", home_index_path %></li>
+</ul>
+<%= button_to  "JOIN US", new_user_registration_path, class:"join_btn" %></div>
+</nav>
 <h1><%=@role%></h1>
 <p>Find me in app/views/home/index.html.erb</p>
-<%= link_to  "sign out", destroy_user_session_path, method: :delete %>
+
 <div class ="container">
         <div>
-              <%= image_tag  "1.jpg", class: "img" %>
+              <%= image_tag  "logo.png", class: "img" %>
               
         </div>
         
@@ -11,6 +20,6 @@
   <%= text_field_tag(:query, "", class: "input-field") %>
   <%= submit_tag("Search",class: "search-btn") %>
 <% end %>
+<%= link_to  "sign out", destroy_user_session_path, method: :delete %>
 
-    
  </div>

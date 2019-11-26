@@ -9,9 +9,6 @@ class TripController < ApplicationController
         
         redirect_to home_indexguest_path
     end
-    def show
-        @trip = Trip.find(params[:id])
-    end
     private
     def trips_params
         params.require(:trip).permit(:name, :description, :trip_image, :places, :points_of_interest, :time, :duration, :city, :user_id)

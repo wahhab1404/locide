@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   get 'home/index'
-  resources :home
   devise_for :users
   root to: "home#index"
   get 'home/indexguest'
   get 'home/searchguest'
   get 'trip/new'
   get 'home/searchuser'
+  get 'trip/show'
   get 'trip/show'
   get 'home/guideprofile'
   post '/trip', to: 'trip#create', as: :trips

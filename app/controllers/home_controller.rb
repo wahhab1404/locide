@@ -29,4 +29,7 @@ class HomeController < ApplicationController
   def guides_params
       params.require(:user).permit(:about_me, :why_me)
   end
+  def guideprofile 
+    @trips = current_user.trips
+  end
 end

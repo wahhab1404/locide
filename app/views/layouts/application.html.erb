@@ -17,12 +17,20 @@
     <li> <%= link_to  "ABOUT US", home_index_path %></li>
     <li> <%= link_to  "FAQs", home_index_path %></li>
 </ul>
+<div class="btns">
 <% if current_user == nil %>
-<%= button_to  "JOIN US", new_user_registration_path, method: :get, class:"join_btn" %></div>
+<%= button_to  "JOIN US", new_user_registration_path, method: :get, class:"join_btn" %>
+<%= button_to  "SIGN IN",  new_user_session_path, method: :get, class:"join_btn2" %>
+</div>
 <%elsif current_user.role == "user"%>
-<%= button_to  "Become Guide", edit_user_registration_path(:guide => "true"), method: :get, class:"join_btn" %></div>
+<%= button_to  "Become Guide", edit_user_registration_path(:guide => "true"), method: :get, class:"join_btn" %>
+<%= button_to  "SIGN OUT",  destroy_user_session_path, method: :delete, class:"join_btn2" %>
+</div>
+
 <%else%>
-<%= button_to  "Create Trip", trip_new_path, method: :get, class:"join_btn" %></div>
+<%= button_to  "Create Trip", trip_new_path, method: :get, class:"join_btn" %>
+<%= button_to  "SIGN OUT",  destroy_user_session_path, method: :delete, class:"join_btn2" %>
+</div>
 <%end%>
 </nav>
     <%= yield %>

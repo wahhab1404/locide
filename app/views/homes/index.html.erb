@@ -1,0 +1,29 @@
+<div class="user-info">
+<h1> Welcome <%=@fullname%></h1></div>
+<h1><%=@bookings.to_json%></h1>
+
+<div class ="container">        
+<%= form_tag(homes_searchuser_path, method: "get") do %>
+  <%= text_field_tag(:query, "", class: "input-field") %>
+  <%= submit_tag("Search",class: "search-btn") %>
+<% end %>
+<%= link_to  "sign out", destroy_user_session_path, method: :delete, class:".sign" %>
+<div class="book">
+      <% @bookings.each do |booking| %>
+           <div> 
+             <%= image_tag  "trip", class:"profile-image" %>
+                <div>
+                    <h4>Trip Name :<%= booking.trip.name%></h4>
+                    <h4>Points Of Intrest:<%= booking.trip.points_of_interest%> <%= booking.trip.time%></h4>
+                    <%
+=begin%>
+ <%= link_to  "VIEW", trip_show_path(:id => trip.id) %> 
+<%
+=end%>
+                </div>
+            </div>
+        <%end%>
+    </div>
+ </div>
+
+ </div>

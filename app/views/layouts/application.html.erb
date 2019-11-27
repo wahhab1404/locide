@@ -12,10 +12,10 @@
   <body>
   <nav>
 <ul>
-    <li> <%= link_to  "HOME", home_index_path %></li>
-    <li> <%= link_to  "TRIPS & TOURS", home_index_path %></li>
-    <li> <%= link_to  "ABOUT US", home_index_path %></li>
-    <li> <%= link_to  "FAQs", home_index_path %></li>
+    <li> <%= link_to  "HOME", homes_index_path %></li>
+    <li> <%= link_to  "TRIPS & TOURS", homes_index_path %></li>
+    <li> <%= link_to  "ABOUT US", homes_index_path %></li>
+    <li> <%= link_to  "FAQs", homes_index_path %></li>
 </ul>
 <div class="btns">
 <% if current_user == nil %>
@@ -28,7 +28,7 @@
 </div>
 
 <%else%>
-<%= button_to  "Create Trip", trip_new_path, method: :get, class:"join_btn" %>
+<%= button_to  "Create Trip", trips_new_path, method: :get, class:"join_btn" %>
 <%= button_to  "SIGN OUT",  destroy_user_session_path, method: :delete, class:"join_btn2" %>
 </div>
 <%end%>

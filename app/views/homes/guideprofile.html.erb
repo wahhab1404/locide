@@ -1,0 +1,44 @@
+<div class="main">
+<div class="card-div">
+    <%= image_tag  "person-1.jpg", class:"profile-image" %>
+    <div class= "user-info">
+         <h1><%=@trips.first.user.first_name%> <%=@trips.first.user.last_name%><h1>
+         <h3><%=@trips.first.user.country%> <%=@trips.first.user.city%><h3>
+    </div>
+            <%
+=begin%>
+ <%= button_to  "BOOK", new_user_registration_path, class:"book-btn" %> 
+<%
+=end%>
+    </div>
+    
+    <div class= "about-guied">
+        <div class= "single-line">
+             <h2>About Me<h2>
+             <h3>Here is some info about me !</h3>
+        </div> 
+        <div class="single-line">
+        
+        
+        </div>
+        
+
+    </div>
+   <div class="trips-container">
+            <div class="trips-div">
+                <% @trips.each do |trip| %>
+                    <div class = "t-box"> 
+                    
+                        <%= image_tag  "trip", class:"profile-image" %>
+                        <div class="trip-card">
+                             <h4>Trip Name :<%= trip.name%></h4>
+                             <h4>Points Of Intrest:s<%= trip.points_of_interest%></h4>
+                            <%= link_to  "VIEW", trips_show_path(:id => trip.id) %>
+                        </div>
+                    </div>
+                <%end%>
+                </div>
+            </div>
+        </div>
+ </div>
+ 

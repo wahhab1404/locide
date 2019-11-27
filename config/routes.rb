@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'homes/index'
   devise_for :users
-  root to: "home#index"
-  get 'home/indexguest'
-  get 'home/searchguest'
-  get 'trip/new'
-  post 'home/guideprofile'
-  get 'home/searchuser'
-  post 'home/searchuser'
-  get 'trip/show'
-  get 'home/guideprofile'
-  post '/trip', to: 'trip#create', as: :trips
-  post '/home', to: 'home#update', as: :homes
+  root to: "homes#index"
+  get 'homes/indexguest'
+  get 'homes/searchguest'
+  get 'trips/new'
+  get 'homes/searchuser'
+  get 'trips/show'
+  get 'homes/guideprofile'
+  get 'bookings/new'
+  get 'trips/edit'
+  post '/trips', to: 'trips#create', as: :trips
+  post '/bookings', to: 'bookings#create', as: :bookings
+  post '/homes', to: 'homes#update', as: :homes
+  get 'trips/:id/edit', to: 'trips#edit'
+  #put '/trip', to: 'trip#update', as: :trips
+  resources :bookings, :homes, :trips
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class HomesController < ApplicationController
   
   def index
     begin
@@ -6,8 +6,9 @@ class HomeController < ApplicationController
       @last_name = current_user.last_name
       @fullname = @first_name + " " + @last_name
       @role = current_user.role
+      @bookings= current_user.bookings
     rescue NoMethodError => e
-      redirect_to home_indexguest_path
+      redirect_to homes_indexguest_path
     end
   end
   def searchguest
@@ -25,11 +26,14 @@ class HomeController < ApplicationController
   def searchuser
     @result = Trip.where(city: params[:query])
   end
+  def guideprofile
+    @guide = User.find(params[:id])
+    @trips = @guide.trips
+  end
+  
   private
   def guides_params
       params.require(:user).permit(:about_me, :why_me)
   end
-  def guideprofile 
-    @trips = current_user.trips
-  end
+
 end

@@ -1,0 +1,29 @@
+<div class="container">
+<%= form_for @trip do |f| %>
+    <%=f.label :name, 'Name of the trip'%>
+    <%=f.text_field :name, placeholder: "Come up with something attractive", :required => 'required'%>
+    <br /> <br />
+    <%=f.label :description, 'Description for the trip'%>
+    <%=f.text_field :description, placeholder: "Describe the trip", :required => 'required'%>
+    <br /> <br />
+    <%=f.label :trip_image, 'Trip Image'%>
+    <%=f.text_field :trip_image, placeholder: "Place the URL", :required => 'required'%>
+    <br /> <br />
+    <%=f.label :places, 'Places'%>
+    <%=f.text_field :places, placeholder: "Write the places you'll be visiting", :required => 'required'%>
+    <br /> <br />
+    <%=f.label :points_of_interest, 'Points of Interest'%>
+    <%=f.text_field :points_of_interest, placeholder: "Write the interesting points about the trip. example: shopping, historical, nature, sport, etc.", :required => 'required'%>
+    <br /> <br />
+    <%=f.label :time, 'Time'%>
+    <%=f.date_field :time, :required => 'required'%>
+    <br /> <br />
+    <%=f.label :duration, 'duration'%>
+    <%=f.text_field :duration, placeholder: "How long is it going to take", :required => 'required'%>
+    <br /> <br />
+    <%=f.label :city, 'city'%>
+    <%=f.text_field :city, placeholder: "In what city or what's the nearest city", :required => 'required'%>
+    <br /> <br />
+    <%=f.submit "Submit"%>
+<%end%>
+</div>

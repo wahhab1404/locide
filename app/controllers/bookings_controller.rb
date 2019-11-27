@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+    before_action :is_owner, only: [:destroy] 
     def new
         @trip = Trip.find(params[:id])
         @user_id = params[:id]
@@ -8,7 +9,18 @@ class BookingsController < ApplicationController
         @trip = Trip.find(params[:booking][:trip_id])
         @booking = Booking.create(booking_params)
         @booking.save
-        redirect_to home_index_path
+        redirect_to homes_index_path
+    end
+    def destroy
+        Booking.find(params[:id]).destroy
+        redirect_to homes_index_path
+    end
+    def is_owner
+        if current_user.id == Booking.find(params[:id]).user_id
+            return true
+        else
+            redirect_to homes_index_path
+        end
     end
     private
     def booking_params

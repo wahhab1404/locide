@@ -1,6 +1,7 @@
 class Trip < ApplicationRecord
   belongs_to :user
-  has_many :users, through: :bookings
+  has_many :bookings , dependent: :destroy
+  # has_many :users, through: :bookings, dependent: :destroy
   validates :name, presence: true, on: :create
   validates :description, presence: true, on: :create
   validates :places, presence: true, on: :create

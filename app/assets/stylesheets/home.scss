@@ -9,8 +9,18 @@
 }
 body {
   margin: 0 auto;
-  background-color: #d0b375;
+  background-color: #f1ece0;
+  
+  // background-color: #fffffa;
+  
   color: black;
+}
+.background{
+  height: 100%;
+  width: 100%;
+  background: url("https://img.wallpapersafari.com/desktop/1366/768/93/10/qhZXed.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -22,22 +32,38 @@ body {
   text-align: center;
 }
 .main_image {
-  margin: 15vh;
-  height: 30vh;
-  width: 30vw;
+  
+  margin-top: 13%;
+  height: 20%;
+  width: 33%;
 }
 .input-field {
-  width: 40vw;
-  height: 20px;
-  border-radius: 10px;
+  width: 40%;
+  height: 25px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+.input-field-user{
+  width: 40%;
+  height: 25px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+  box-shadow: rgba(0,0,0, 0.2);
 }
 .search-btn {
   color: #e9e9e9;
+  border: none;
+  outline: none;
+  cursor: pointer;
   background-color: #a31b0c;
-  border-radius: 10px 0 10px 0;
+  border-radius: 0 25px 25px 0;
   position: absolute;
   right: 27%;
-  height: 20px;
+  height: 25px;
   width: 60px;
 }
 a {
@@ -48,7 +74,7 @@ a {
   color: black;
 }
 nav {
-  background-color: #a31b0c;
+  background-color: #101010ff;
   height: 40px;
   padding: 3vh;
   margin: 0 auto;
@@ -194,10 +220,6 @@ li {
   
 
 }
-.sign{
-  background-color: blue;
-  z-index: 2;
-}
 .full-name-profile {
   position: absolute;
   left: 16%;
@@ -270,4 +292,16 @@ li {
 a:hover{
   background-color: #d0b375;
   color: #a31b0c;
+}
+.log-in{
+  height: 70%;
+  width: 49%;
+  background-color:#a5a5a5;
+  margin-top: 10%;
+}
+.sign-up{
+  height: 70%;
+  width: 49%;
+  background-color:#a5a5a5;
+  margin-top: 6%;
 }

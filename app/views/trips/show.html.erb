@@ -2,7 +2,6 @@
     <div class="card-div">
         <%= image_tag  "person-1.jpg", class:"profile-image" %>
         <div class= "user-info">
-            <%= image_tag  @trip.trip_image, :class="trip-image" %>
              <h1><%=@trip.user.first_name%> <%=@trip.user.last_name%><h1>
              <h3><%=@trip.user.country%> <%=@trip.user.city%><h3>
         </div>

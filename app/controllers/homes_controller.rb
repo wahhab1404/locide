@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class HomesController < ApplicationController
   
   def index
     begin
@@ -8,7 +8,7 @@ class HomeController < ApplicationController
       @role = current_user.role
       @bookings= current_user.bookings
     rescue NoMethodError => e
-      redirect_to home_indexguest_path
+      redirect_to homes_indexguest_path
     end
   end
   def searchguest

@@ -3,7 +3,7 @@
 <h1><%=@bookings.to_json%></h1>
 
 <div class ="container">        
-<%= form_tag(home_searchuser_path, method: "get") do %>
+<%= form_tag(homes_searchuser_path, method: "get") do %>
   <%= text_field_tag(:query, "", class: "input-field") %>
   <%= submit_tag("Search",class: "search-btn") %>
 <% end %>
@@ -15,7 +15,11 @@
                 <div>
                     <h4>Trip Name :<%= booking.trip.name%></h4>
                     <h4>Points Of Intrest:<%= booking.trip.points_of_interest%> <%= booking.trip.time%></h4>
-                    <%= link_to  "VIEW", trip_show_path(:id => trip.id) %>
+                    <%
+=begin%>
+ <%= link_to  "VIEW", trip_show_path(:id => trip.id) %> 
+<%
+=end%>
                 </div>
             </div>
         <%end%>

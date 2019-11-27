@@ -6,6 +6,7 @@ class BookingController < ApplicationController
     end
     def create
         @trip = Trip.find(params[:booking][:trip_id])
-        @booking = @trip.bookings.create(params.require(:booking).permit(:user_id, :trip_id))
+        @booking = @trip.bookings.create(params.require(:booking).permit(:id, :user_id))
+        redirect_to home_index_path
     end
 end

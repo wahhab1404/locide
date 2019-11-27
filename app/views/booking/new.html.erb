@@ -5,9 +5,9 @@
 <h3>Organizer: <%=@trip.user.first_name%> <%=@trip.user.last_name%></h3>
 <h3>Phone: <%=@trip.user.phone%></h3>
 <h3>Email: <%=@trip.user.email%></h3>
-<%= @booking.to_json %>
 <%= form_for @booking do |f| %>
+
     <%=f.hidden_field :trip_id, :value => @trip.id %>
-    <%=f.hidden_field :user_id, :value => @user_id %>
+    <%=f.hidden_field :user_id, :value => current_user.id%>
     <%=f.submit "Confirm Booking"%>
 <% end %>

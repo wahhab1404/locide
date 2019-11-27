@@ -207,7 +207,7 @@ li {
 .single-line{
   display: flex;
   font-weight: 100;
-  width: 100vh;
+  width: 100%;
   justify-content: space-around;
 }
 .btns{
@@ -239,3 +239,8 @@ li {
   width: 100%;
   background-color: #d0b375;
 }
+// .link-to{
+//   height: 20px;
+//   width: 100px;
+  
+// }

@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
         @trip = Trip.find(params[:booking][:trip_id])
         @booking = Booking.create(booking_params)
         @booking.save
-        redirect_to home_index_path
+        redirect_to homes_index_path
     end
     private
     def booking_params

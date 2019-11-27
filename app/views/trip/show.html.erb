@@ -1,3 +1,0 @@
-<h1><%= @trip.name%></h1>
-<%= link_to  "View", home_guideprofile_path(:id => @trip.user.id),class:"link-to" %>
-<%= link_to  "Book", booking_new_path(:id => @trip.id, :user_id => current_user.id),class:"link-to"%>

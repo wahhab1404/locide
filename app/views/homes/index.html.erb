@@ -7,7 +7,7 @@
   <%= text_field_tag(:query, "", class: "input-field") %>
   <%= submit_tag("Search",class: "search-btn") %>
 <% end %>
-<%= link_to  "sign out", destroy_user_session_path, method: :delete, class:".sign" %>
+<%= link_to  "Sign out", destroy_user_session_path, method: :delete, class:".sign" %>
 <div class="book">
       <% @bookings.each do |booking| %>
            <div> 

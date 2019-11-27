@@ -6,13 +6,11 @@
 </div>
 
 
-<div class ="container">
-<h2>Search For Trip</h2>        
+<div class ="container">       
 <%= form_tag(homes_searchuser_path, method: "get") do %>
   <%= text_field_tag(:query, "", class: "input-field") %>
   <%= submit_tag("Search",class: "search-btn") %>
 <% end %>
-<%= link_to  "sign out", destroy_user_session_path, method: :delete, class:".sign" %>
  <div class="search-container"> 
       <% @bookings.each do |booking| %>
            <div class="user-card-book"> 
@@ -20,7 +18,6 @@
                 <div c>
                     <h4>Trip Name :<%= booking.trip.name%></h4>
                     <h4>Points Of Intrest:<%= booking.trip.points_of_interest%> <%= booking.trip.time.to_s.split(" ")[0]%></h4>
-                    
                 </div>
             </div>
         <%end%>

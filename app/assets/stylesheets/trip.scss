@@ -1,3 +1,48 @@
 // Place all the styles related to the Trip controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    background-color: beige;
+}
+.trip-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.user-info{
+    display: inline-block;
+    
+}
+
+
+.card-div {
+    background-color: #d0b375;
+}
+.trip-div-container{
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+}
+.single-line-trip{
+    display: flex;
+    font-weight: 100;
+    
+    // width: 99%;
+    margin-left:10% ;
+    margin-right: 10%;
+    justify-content: space-between;
+    
+  }
+  .link-to{
+    background-color: #a31b0c;
+    border: none;
+    display: inline-block;
+    margin: 0 auto;
+    height: 1.5em;
+    width: 7em;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .link-btns{
+      text-align: center;
+  }

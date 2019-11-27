@@ -1,6 +1,6 @@
 <div class="user-info">
 <h1> Welcome <%=@fullname%></h1></div>
- 
+<h1><%=@bookings.to_json%></h1>
 
 <div class ="container">        
 <%= form_tag(home_searchuser_path, method: "get") do %>

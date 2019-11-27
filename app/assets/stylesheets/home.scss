@@ -12,6 +12,7 @@ body {
   background-color: #d0b375;
   color: black;
 }
+
 .container {
   height: 100vh;
   width: 100vw;
@@ -64,7 +65,7 @@ li {
 .search-container {
   position: relative;
   display: flex;
-  height: fit-content;
+
   
 }
 .user-card {
@@ -72,6 +73,17 @@ li {
   text-align: center;
   height: 160px;
   width: 200px;
+  background-color: #e9e9e9;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-top: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+}
+.user-card-guest{
+  position: relative;
+  text-align: center;
+  height: 160px;
+  width: 400px;
   background-color: #e9e9e9;
   margin-right: 2%;
   margin-left: 2%;
@@ -92,7 +104,7 @@ li {
 .full-name-div {
   position: absolute;
   left: 40%;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid black ;
@@ -120,7 +132,7 @@ li {
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: left;  
 }
 .country {
@@ -157,8 +169,8 @@ li {
   position: absolute;
   top:30%;
   left: 40%;
-  font-size: 1.3em;
-  margin-top: 10px;
+  font-size: 0.9em;
+  margin-top: 2%;
 }
 .booking{
   z-index: 99;
@@ -175,9 +187,11 @@ li {
   border: none;
   display: block;
   margin: 0 auto;
+  margin-top:100% ;
   height: 1.5em;
   width: 7em;
   border-radius: 12px;
+  
 
 }
 .sign{

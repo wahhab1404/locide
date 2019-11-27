@@ -19,14 +19,17 @@ class TripsController < ApplicationController
         @trip.update(trips_params)
         redirect_to "http://localhost:3000/trips/show?id=#{@trip.id}"
     end
+    def destroy
+        Trip.find(params[:id]).destroy
+        redirect_to "http://localhost:3000/"
+    end
     def is_owner
+        @trip = Trip.find(params[:id])
         if current_user.id == Trip.find(params[:id]).user_id
             return true
         else 
-            render(
-                html: "<script>alert('You're Not The Owner!')</script>".html_safe,
-                layout: 'application'
-              )
+
+            redirect_to "http://localhost:3000/trips/show?id=#{@trip.id}", :alert => {:error => "You're not the owner"}
         end
     end
     private

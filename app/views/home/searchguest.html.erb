@@ -1,13 +1,3 @@
-<nav>
-<ul>
-    <li> <%= link_to  "HOME", home_index_path %></li>
-    <li> <%= link_to  "TRIPS & TOURS", home_index_path %></li>
-    <li> <%= link_to  "ABOUT US", home_index_path %></li>
-    <li> <%= link_to  "FAQs", home_index_path %></li>
-</ul>
-<%= button_to  "JOIN US", new_user_registration_path, class:"join_btn" %></div>
-</nav>
-
 <% @results.each do |result| %>
 <div class= "search-container">
     <div class = "user-card">
@@ -16,8 +6,9 @@
             <h1 class = "name"><%= result.first_name %> <%= result.last_name %></h1>
             <h3 class = "country"><%= result.country %>,<%= result.city %></h3>
         </div>
-        <div class="about-me">TEST</div>
+        <div class="about-me"><%= result.about_me %></div>
             <%= image_tag  "1.jpg", class:"avatar" %>
+            <%= button_to  "BOOK", new_user_registration_path, class:"book-btn" %>
         </div>
         
     

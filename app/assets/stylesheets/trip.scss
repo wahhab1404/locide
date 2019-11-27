@@ -14,21 +14,31 @@
 }
 
 
-.card-div {
+.card-div-trip-show {
+    display: flex;
+    flex-direction: row;
     background-color: #d0b375;
 }
 .trip-div-container{
-    text-align: center;
+    margin-top:3%;
+    height: fit-content;
+    
+    // text-align: center;
+    width: 45%;
     background-color:  #e9e9e9;
     box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+    
     
 }
 .single-line-trip{
     display: flex;
+    flex-direction: row;
     font-weight: 100;
-    margin-left:2% ;
+    margin-left:5% ;
     margin-right: 2%;
     justify-content: space-between;
+    width: 80%;
+    // margin: 0 auto;
     
   }
   .link-to{
@@ -57,4 +67,16 @@
   }
   .link-btns{
       margin: 0 auto;
+      float: right;
+      margin-right: 10%;
+  }
+  .trip-div {
+      
+    
+  }
+  .triph2 {
+      font-size: 14px;
+  }
+  .triph3 {
+    font-size: 12px;
   }

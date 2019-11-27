@@ -27,7 +27,9 @@ class TripsController < ApplicationController
         @trip = Trip.find(params[:id])
         if current_user.id == Trip.find(params[:id]).user_id
             return true
-        else redirect_to "http://localhost:3000/trips/show?id=#{@trip.id}"
+        else 
+
+            redirect_to "http://localhost:3000/trips/show?id=#{@trip.id}", :alert => {:error => "You're not the owner"}
         end
     end
     private

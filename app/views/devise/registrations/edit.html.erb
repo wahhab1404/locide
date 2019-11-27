@@ -15,7 +15,7 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password", :required => 'requierd' %>
   </div> 
-
+ 
 <% if current_user.role == "user" %>
 <%= f.label :Confirm_To_Be_Guide? %>
   <%= check= f.check_box :about_me,{}, true, false %>

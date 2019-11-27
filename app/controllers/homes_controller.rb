@@ -14,6 +14,10 @@ class HomesController < ApplicationController
   def Indexguest
 
   end
+  def aboutus
+
+  end
+  
   def searchguest
     @results = User.where(city: params[:q], role:'guide')
   end

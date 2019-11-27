@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   get 'home/indexguest'
   get 'home/searchguest'
   get 'trip/new'
+  post 'home/guideprofile'
   get 'home/searchuser'
-  get 'trip/show'
+  post 'home/searchuser'
   get 'trip/show'
   get 'home/guideprofile'
   post '/trip', to: 'trip#create', as: :trips

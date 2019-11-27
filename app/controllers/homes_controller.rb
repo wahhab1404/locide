@@ -11,6 +11,9 @@ class HomesController < ApplicationController
       redirect_to homes_indexguest_path
     end
   end
+  def Indexguest
+
+  end
   def searchguest
     @results = User.where(city: params[:q], role:'guide')
   end

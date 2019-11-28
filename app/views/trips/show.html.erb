@@ -42,8 +42,11 @@
 </div>
 <div class="link-btns">
         <%= link_to  "View", homes_guideprofile_path(:id => @trip.user.id),class:"link-to" %>
+        <%if current_user.id != @trip.user_id%>
         <%= link_to  "Book", bookings_new_path(:id => @trip.id, :user_id => current_user.id),class:"link-to"%>
+        <%else%>
         <%= link_to 'Edit', trips_edit_path(:id => @trip.id),class:"link-to" %>
         <%= link_to  "Delete", trip_path(@trip) ,method: :delete ,class:"link-to"%>
+        <%end%>
     </div>
 

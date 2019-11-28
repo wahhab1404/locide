@@ -37,7 +37,13 @@ body {
   background-repeat: no-repeat;
   background-image: url("https://cleanpublicdomain.com/wp-content/uploads/edd/2018/02/desert-2897107-1560x1040.jpg");
 }
-
+.log-in-background{
+  margin-top:0px;
+  height: 100vh;
+  width:100%;
+  // background-size: cover;
+  background-image: url("https://old-tokyo.info/wp-content/uploads/2019/01/2018-02-10-13.48.48-1140x641.jpg");
+}
 .container {
   height: 100vh;
   width: 100vw;
@@ -362,10 +368,12 @@ a:hover{
   color: #a31b0c;
 }
 .log-in{
-  height: 70%;
+  color: #e9e9e9;
+  height: 100%;
   width: 49%;
-  background-color:#a5a5a5;
-  margin-top: 10%;
+  padding-top: 10%;
+  background-color:rgba(0,0,0, 0.8);
+  
 }
 .sign-up{
   height: 70%;

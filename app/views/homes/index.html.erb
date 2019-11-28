@@ -1,8 +1,8 @@
 <div class="profile-background">
 <div class="profile-cont">
 <div class="user-name-profile">
-<h1> Welcome <%=@fullname%></h1>
-<h2> You have <%=@bookings.count%> bookings</h2>
+<h1> Welcome <%=@fullname%></h1><br />
+<h5> You have <%=@bookings.count%> bookings</h5>
 </div>
 </div>
 
@@ -19,8 +19,8 @@
                 <div c>
                     <h4>Trip Name :<%= booking.trip.name%></h4>
                     <h4>Points Of Intrest:<%= booking.trip.points_of_interest%> <%= booking.trip.time.to_s.split(" ")[0]%></h4>
-                    
-                    <%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' }, calss:"link-to" %>
+                    <br />
+                    <%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure you want to delete this booking ?' }, class:"link-to" %>
                 </div>
             </div>
         <%end%>

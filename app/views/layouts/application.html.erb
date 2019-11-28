@@ -19,17 +19,17 @@
 </ul>
 <div class="btns">
 <% if current_user == nil %>
-<%= button_to  "JOIN US", new_user_registration_path, method: :get, class:"join_btn" %>
-<%= button_to  "SIGN IN",  new_user_session_path, method: :get, class:"join_btn2" %>
+<%= button_to  "JOIN US ", new_user_registration_path, method: :get, class:"join_btn" %>
+<%= button_to  "Sign in",  new_user_session_path, method: :get, class:"join_btn2" %>
 </div>
 <%elsif current_user.role == "user"%>
 <%= button_to  "Become Guide", edit_user_registration_path(:guide => "true"), method: :get, class:"join_btn" %>
-<%= button_to  "SIGN OUT",  destroy_user_session_path, method: :delete, class:"join_btn2" %>
+<%= button_to  "Sign Out",  destroy_user_session_path, method: :delete, class:"join_btn2" %>
 </div>
 
 <%else%>
 <%= button_to  "Create Trip", trips_new_path, method: :get, class:"join_btn" %>
-<%= button_to  "SIGN OUT",  destroy_user_session_path, method: :delete, class:"join_btn2" %>
+<%= button_to  "Sign Out",  destroy_user_session_path, method: :delete, class:"join_btn2" %>
 </div>
 <%end%>
 </nav>

@@ -39,8 +39,8 @@
 <%end%>
 
 <br />
-<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-<%= link_to "Back", :back %>
+<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class:"link-to" %>
+<%= link_to "Back", :back, class:"link-to" %>
 </div>
 
 <script type="text/javascript">

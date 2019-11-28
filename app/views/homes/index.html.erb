@@ -1,14 +1,15 @@
+<div class="profile-background">
 <div class="profile-cont">
 <div class="user-name-profile">
-<h1 > Welcome <%=@fullname%></h1>
-<h2> You have <%=@bookings.count%> bookings</h2>
+<h1> Welcome <%=@fullname%></h1><br />
+<h5> You have <%=@bookings.count%> bookings</h5>
 </div>
 </div>
 
 
-<div class ="container">       
+<div class ="container-index">       
 <%= form_tag(homes_searchuser_path, method: "get") do %>
-  <%= text_field_tag(:query, "", class: "input-field") %>
+  <%= text_field_tag(:query, "", class: "input-field-user") %>
   <%= submit_tag("Search",class: "search-btn") %>
 <% end %>
  <div class="search-container"> 
@@ -18,11 +19,13 @@
                 <div c>
                     <h4>Trip Name :<%= booking.trip.name%></h4>
                     <h4>Points Of Intrest:<%= booking.trip.points_of_interest%> <%= booking.trip.time.to_s.split(" ")[0]%></h4>
-                    <%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' }, calss:"link-to" %>
+                    <br />
+                    <%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure you want to delete this booking ?' }, class:"link-to" %>
                 </div>
             </div>
         <%end%>
     </div>
  </div>
 
+ </div>
  </div>

@@ -1,4 +1,24 @@
-<% @result.each do |result| %>
-<h1> <%= result.name %></h1>
-<%= link_to  "View", trips_show_path(:id => result.id) %>
-<%end%>
+<div class ="container background-user">
+
+ <div class="search-container"> 
+      <% @result.each.each do |result| %>
+           <div class="user-card-book"> 
+             <%= image_tag  "trip", class:"profile-image" %>
+                <div>
+                    <h4><%= result.name%></h4>
+                    <h4>Intrests:<%= result.points_of_interest%></h4> <br /> <h4>  <%= result.time.to_s.split(" ")[0]%></h4>
+                    <h4><%=result.city%></h4>
+                   
+                    <%= link_to  "View", trips_show_path(:id => result.id) %>
+                    
+                </div>
+            </div>
+        <%end%>
+    </div>
+ </div>
+
+ </div>
+
+
+
+

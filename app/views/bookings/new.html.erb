@@ -1,13 +1,17 @@
-<h1>Trip Information</h1>
-<h3>Name: <%=@trip.name%></h3>
-<h3>Time: <%=@trip.time.to_s.split(" ")[0]%></h3>
-<h3>Duration: <%=@trip.duration%></h3>
-<h3>Organizer: <%=@trip.user.first_name%> <%=@trip.user.last_name%></h3>
-<h3>Phone: <%=@trip.user.phone%></h3>
-<h3>Email: <%=@trip.user.email%></h3>
-<%= form_for @booking do |f| %>
+<div class="container background">
+    <div class="trip-confirm">
+    <h1>Trip Information</h1>
+    <h3>Name: <%=@trip.name%></h3>
+    <h3>Time: <%=@trip.time.to_s.split(" ")[0]%></h3>
+    <h3>Duration: <%=@trip.duration%></h3>
+    <h3>Organizer: <%=@trip.user.first_name%> <%=@trip.user.last_name%></h3>
+    <h3>Phone: <%=@trip.user.phone%></h3>
+    <h3>Email: <%=@trip.user.email%></h3>
+    <%= form_for @booking do |f| %>
 
     <%=f.hidden_field :trip_id, :value => @trip.id %>
     <%=f.hidden_field :user_id, :value => current_user.id%>
-    <%=f.submit "Confirm Booking"%>
+    <%=f.submit "Confirm", class:"link-to"%>
 <% end %>
+</div>
+</div>

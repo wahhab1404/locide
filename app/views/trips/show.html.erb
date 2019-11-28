@@ -1,7 +1,8 @@
-<div class="trip-container">
-    <div class="card-div">
+<div class="card-div-trip-show ">
+    <div class="card-div-trip">
         <%= image_tag  "person-1.jpg", class:"profile-image" %>
         <div class= "user-info">
+            
              <h1><%=@trip.user.first_name%> <%=@trip.user.last_name%><h1>
              <h3><%=@trip.user.country%> <%=@trip.user.city%><h3>
         </div>
@@ -9,39 +10,40 @@
     <div class="trip-div-container">
         <div class="trip-div">
              <div class= "single-line-trip">
-                   <h2>Trip Name<h2>
-                   <h3><%=@trip.name%></h3>
+                   <h2 class="triph2">Trip Name<h2>
+           
+                   <h3 class="triph3"><%=@trip.name%></h3>
              </div> 
              <div class= "single-line-trip">
-                   <h2>Trip City<h2>
-                   <h3><%=@trip.city%></h3>
+                   <h2 class="triph2"> Trip City<h2>
+                   <h3 class="triph3"><%=@trip.city%></h3>
              </div> 
              <div class= "single-line-trip">
-                   <h2>Places<h2>
-                   <h3><%=@trip.places%></h3>
+                   <h2 class="triph2">Places<h2>
+                   <h3 class="triph3"><%=@trip.places%></h3>
              </div> 
              <div class= "single-line-trip">
-                   <h2>Points Of Interests<h2>
-                   <h3><%@trip.points_of_interest%></h3>
+                   <h2 class="triph2">Points Of Interests<h2>
+                   <h3 class="triph3"><%@trip.points_of_interest%></h3>
              </div> 
 
-        </div>
-        <div class="trip-div">
+            
         <div class= "single-line-trip">
-                   <h2>Date and Time<h2>
-                   <h3><%@trip.time%></h3>
+                   <h2 class="triph2">Date and Time<h2>
+                   <h3 class="triph2"><%@trip.time%></h3>
              </div> 
             <div class= "single-line-trip">
-                   <h2>Duration<h2>
-                   <h3><%=@trip.duration%></h3>
+                   <h2 class="triph2">Duration<h2>
+                   <h3 class="triph2"><%=@trip.duration%></h3>
              </div> 
-        </div>
+      </div>
     </div>
-    <div calss="link-btns">
+    
+</div>
+<div class="link-btns">
         <%= link_to  "View", homes_guideprofile_path(:id => @trip.user.id),class:"link-to" %>
         <%= link_to  "Book", bookings_new_path(:id => @trip.id, :user_id => current_user.id),class:"link-to"%>
         <%= link_to 'Edit', trips_edit_path(:id => @trip.id),class:"link-to" %>
-        <%= link_to  "Delete", trip_path(@trip) ,method: :delete%>
+        <%= link_to  "Delete", trip_path(@trip) ,method: :delete ,class:"link-to"%>
     </div>
-</div>
 

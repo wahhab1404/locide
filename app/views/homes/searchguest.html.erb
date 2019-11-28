@@ -1,14 +1,16 @@
 <% @results.each do |result| %>
 <div class= "search-container">
-    <div class = "user-card">
+    <div class = "user-card-guest">
         <div class ="personal-info">
             <div class = "full-name-div">
             <h1 class = "name"><%= result.first_name %> <%= result.last_name %></h1>
             <h3 class = "country"><%= result.country %>,<%= result.city %></h3>
+            
         </div>
+         <%= button_to  "BOOK", new_user_registration_path, class:"book-btn" %>
         <div class="about-me"><%= result.about_me %></div>
-            <%= image_tag  "1.jpg", class:"avatar" %>
-            <%= button_to  "BOOK", new_user_registration_path, class:"book-btn" %>
+            <%= image_tag  "person-1.jpg", class:"avatar" %>
+            
         </div>
         
     

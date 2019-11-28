@@ -1,3 +1,4 @@
+<div class="container sign-up">
 <h2>Join Our Team</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -38,9 +39,9 @@
 <%end%>
 
 <br />
-<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
-<%= link_to "Back", :back %>
-
+<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class:"link-to" %>
+<%= link_to "Back", :back, class:"link-to" %>
+</div>
 
 <script type="text/javascript">
   var checkbox = document.getElementById('user_about_me');

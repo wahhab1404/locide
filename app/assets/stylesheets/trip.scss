@@ -4,44 +4,61 @@
 
 
 .trip-container{
+  position: absolute;
     display: flex;
     flex-direction: column;
-    
 }
 .user-info{
     display: inline-block;
-    
 }
-
-
-.card-div {
-    background-color: #d0b375;
+.card-div-trip-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+.card-div-trip{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2%;
 }
 .trip-div-container{
-    text-align: center;
+    padding: 3%;
+    height: 20%;
+    width: 30%;
     background-color:  #e9e9e9;
-    box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+    box-shadow: 0 0 30px rgba(0,0,0, 0.4);
+    margin: 0 auto;
     
+  
 }
 .single-line-trip{
     display: flex;
+    flex-direction: row;
+    align-content: center;
     font-weight: 100;
-    margin-left:2% ;
+    margin-left:5% ;
     margin-right: 2%;
     justify-content: space-between;
+    width: 80%;
+    // margin: 0 auto;
     
   }
   .link-to{
     background-color: #a31b0c;
     border: none;
     display: inline-block;
-    margin: 0 auto;
+    // margin: 0 auto;
     height: 1.5em;
     width: 7em;
     border-radius: 12px;
     text-align: center;
+    
   }
-  
   
   .user-card-book{
     position: relative;
@@ -49,6 +66,7 @@
     height: 260px;
     width: 230px;
     background-color: #e9e9e9;
+    opacity: 0.7;
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 40px;
@@ -56,5 +74,29 @@
     padding: 1%;
   }
   .link-btns{
-      margin: 0 auto;
+      // margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      
+  }
+  .trip-div {
+      // margin:-10px 0 0 0;
+    
+  }
+  .triph2 {
+      font-size: 14px;
+  }
+  .triph3 {
+    font-size: 12px;
+  }
+  .trip-confirm{
+    margin: 0 auto;
+    position: absolute;
+    top:35%;
+    right:25%;
+    height: 30%;
+    width: 50%;
+    background-color: seashell;
+    opacity: 0.6;
+    
   }

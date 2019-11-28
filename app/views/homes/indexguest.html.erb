@@ -1,10 +1,11 @@
-<div class ="container">
- <div>
+<div class="background">
+    <div class ="container">
+        <div>
               <%= image_tag  "logo.png", class: "main_image" %>
         </div> 
-<%= form_tag(homes_searchguest_path, method: "get") do %>
+    <%= form_tag(homes_searchguest_path, method: "get") do %>
     <%= text_field_tag(:q, "", class: "input-field") %>
     <%= submit_tag("Search",class: "search-btn") %>
 <% end %>  
- 
+    </div>
  </div>

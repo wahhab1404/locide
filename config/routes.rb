@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'trips/edit'
   get 'homes/aboutus'
   get 'homes/alltrips'
+  get 'homes/faqs'
   post '/trips', to: 'trips#create', as: :trips
   post '/bookings', to: 'bookings#create', as: :bookings
   post '/homes', to: 'homes#update', as: :homes

@@ -7,7 +7,7 @@
             <h3 class = "country"><%= result.country %>,<%= result.city %></h3>
             
         </div>
-         <%= button_to  "BOOK", new_user_registration_path, class:"book-btn" %>
+         <%= button_to  "BOOK", new_user_registration_path, method: :get, class:"book-btn" %>
         <div class="about-me"><%= result.about_me %></div>
             <%= image_tag  "person-1.jpg", class:"avatar" %>
             

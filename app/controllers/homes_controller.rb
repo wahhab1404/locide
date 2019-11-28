@@ -24,6 +24,9 @@ class HomesController < ApplicationController
   def edit
     @user = current_user
   end
+  def alltrips
+    @result = Trip.all
+  end
   def update
     user = User.find(params[:id])
     user.update(guides_params)
